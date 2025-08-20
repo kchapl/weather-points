@@ -8,5 +8,14 @@ lazy val root = project
 
     scalaVersion := scala3Version,
 
-    libraryDependencies += "org.scalameta" %% "munit" % "1.0.0" % Test
+    libraryDependencies ++= Seq(
+      "org.scalameta" %% "munit" % "1.0.0" % Test,
+      "com.softwaremill.sttp.client3" %% "core" % "3.9.1",
+      "com.softwaremill.sttp.client3" %% "circe" % "3.9.1",
+      "io.circe" %% "circe-core" % "0.14.6",
+      "io.circe" %% "circe-generic" % "0.14.6",
+      "io.circe" %% "circe-parser" % "0.14.6",
+      "com.github.pureconfig" %% "pureconfig-core" % "0.17.4",
+      "com.softwaremill.sttp.client3" %% "slf4j-backend" % "3.9.1"
+    )
   )
