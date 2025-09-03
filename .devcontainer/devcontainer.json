@@ -1,0 +1,34 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/java
+{
+	"name": "Scala 3 & Java",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/java:1-21-bullseye",
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "none",
+			"installMaven": "true",
+			"installGradle": "false"
+		},
+		"ghcr.io/devcontainers-extra/features/sbt-sdkman:2": {},
+		"ghcr.io/devcontainers/features/sdkman:1": {
+			"packages": [
+				"scala@3.4.1"
+			]
+		},
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installCurl": true,
+			"installHttpie": true
+		}
+	},
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"scalameta.metals",
+				"redhat.java",
+				"anthropic.claude"
+			]
+		}
+	}
+}
